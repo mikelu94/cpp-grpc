@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+message Item {
+    string id = 1;
+    string name = 2;
+}
+
+message Items {
+    repeated Item items = 1;
+}
+
+message NullRequest {}
+
+message SuccessResponse {
+    bool success = 1;
+}
+
+message FoundResponse {
+    bool found = 1;
+}
+
+service Itemizer {
+    rpc CreateItem(Item) returns (SuccessResponse);
+    rpc CreateItems(Items) returns (SuccessResponse);
+    rpc GetItems(NullRequest) returns (Items);
+    rpc CreateItemsStream(stream Item) returns (SuccessResponse);
+    rpc GetItemsStream(NullRequest) returns (stream Item);
+    rpc FindItemsStream(stream Item) returns (stream FoundResponse);
+}

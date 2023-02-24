@@ -1,0 +1,11 @@
+version: '3'
+services:
+  grpc:
+    container_name: grpc
+    image: gcr.io/bazel-public/bazel
+    command: run server
+    environment:
+      - BAZEL_CXXOPTS=-std=c++14
+    tty: true
+    volumes:
+      - ./:/home/ubuntu/

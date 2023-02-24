@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Bazel output
+bazel-bin
+bazel-cpp-grpc
+bazel-out
+bazel-testlogs
+bazel-ubuntu
+.cache
