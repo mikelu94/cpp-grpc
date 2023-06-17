@@ -6,7 +6,7 @@
 
 #include <grpcpp/grpcpp.h>
 
-#include "protos/item.grpc.pb.h"
+#include "proto/item.grpc.pb.h"
 
 using grpc::Server;
 using grpc::Channel;

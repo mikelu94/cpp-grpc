@@ -7,7 +7,7 @@ cc_library(
         "service_impl.h",
     ],
     deps = [
-        "//protos:item_cc_grpc",
+        "//proto:item_cc_grpc",
         "@com_github_grpc_grpc//:grpc++",
     ]
 )
@@ -18,7 +18,7 @@ cc_binary(
     defines = ["BAZEL_BUILD"],
     deps = [
         ":service_impl",
-        "//protos:item_cc_grpc",
+        "//proto:item_cc_grpc",
         "@com_github_grpc_grpc//:grpc++",
     ],
 )

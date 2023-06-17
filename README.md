@@ -15,5 +15,5 @@ $ docker compose up -d
 ## How to Use Client
 
 ```bash
-$ docker exec -it grpc bazel run client --help
+$ docker exec -it grpc bazel run client -- --help
 ```

@@ -5,7 +5,7 @@ cc_binary(
     srcs = ["app.cc"],
     defines = ["BAZEL_BUILD"],
     deps = [
-        "//protos:item_cc_grpc",
+        "//proto:item_cc_grpc",
         "@com_github_grpc_grpc//:grpc++",
     ],
 )
