@@ -7,5 +7,6 @@ cc_binary(
     deps = [
         "//proto:item_cc_grpc",
         "@com_github_grpc_grpc//:grpc++",
+        "@com_google_protobuf//:protobuf",
     ],
 )
